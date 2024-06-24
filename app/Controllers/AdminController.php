@@ -261,4 +261,17 @@ class AdminController extends BaseController
 
         return redirect()->to('/admin/orders');
     }
+
+    public function deleteOrder()
+    {
+        $id = $this->request->getPost('id');
+
+        if ($this->ordersModel->delete($id)) {
+            session()->setFlashdata('message', 'Order deleted successfully.');
+        } else {
+            session()->setFlashdata('error', 'Failed to delete order.');
+        }
+
+        return redirect()->to('/admin/orders');
+    }
 }
