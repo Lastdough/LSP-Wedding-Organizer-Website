@@ -37,6 +37,7 @@
                 <a href="<?= site_url('/') ?>" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">Homepage</a>
                 <a href="<?= site_url('admin/package') ?>" class="inline-block bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors">Manage Package</a>
                 <a href="<?= site_url('admin/orders') ?>" class="inline-block bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors">Manage Orders</a>
+                <a href="<?= site_url('admin/settings') ?>" class="inline-block bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors">Manage About</a>
                 <a href="<?= site_url('admin/logout') ?>" class="inline-block bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">Log Out</a>
             </div>
         </div>

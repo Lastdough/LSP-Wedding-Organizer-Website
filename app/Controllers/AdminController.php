@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\OrdersModel;
 use App\Models\WeddingPackageModel;
+use App\Models\SettingsModel;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\ResponseInterface;
 
@@ -13,12 +14,16 @@ class AdminController extends BaseController
     protected $packageModel;
     protected $validation;
     protected $ordersModel;
+    protected $settingsModel;
+
 
     public function __construct()
     {
         $this->validation = service('validation');
         $this->packageModel = new WeddingPackageModel();
         $this->ordersModel = new OrdersModel();
+        $this->settingsModel = new SettingsModel();
+
     }
 
     // private function generatePackageId($price, $capacity)
@@ -274,4 +279,18 @@ class AdminController extends BaseController
 
         return redirect()->to('/admin/orders');
     }
+
+
+    public function settings()
+    {
+        $settings = $this->settingsModel->find(1);
+        
+        return view('admin/settings', [
+            'title' => 'About Us',
+            'adminName' => session()->get('name'),
+            'settings' => $settings,
+
+        ]);
+    }
+
 }

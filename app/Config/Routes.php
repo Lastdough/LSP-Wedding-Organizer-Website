@@ -23,10 +23,14 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/register', 'AuthController::registerView');
 $routes->post('/register', 'AuthController::register');
 
+$routes->get('unauthorized', "AuthController::Unauthorized");
 
 $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
     $routes->get('', 'AdminController::index');
     $routes->get('package', 'AdminController::index');
+
+    $routes->get('settings', 'AdminController::settings');
+    $routes->post('settings/update', 'SettingsController::update');
 
 
     $routes->get('orders', 'AdminController::orders');
@@ -41,11 +45,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
     $routes->get('logout', 'AuthController::logout');
 });
 
-// $routes->group('user', ['filter' => 'role:user'], function ($routes) {
-//     $routes->get('dashboard', 'Home::udashboard');
-// });
 
-$routes->get('unauthorized', "AuthController::Unauthorized");
 
 //Debugging
 $routes->get('logs', "LogViewerController::index");
