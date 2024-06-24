@@ -113,7 +113,7 @@ class AuthController extends BaseController
         if ($user['role'] == 'admin') {
             return redirect()->to('/admin');
         } else {
-            return redirect()->to('/user');
+            return redirect()->to('/');
         }
     }
 
@@ -139,9 +139,6 @@ class AuthController extends BaseController
 
         session()->set($data);
     }
-
-    
-
 
     public function logout()
     {
