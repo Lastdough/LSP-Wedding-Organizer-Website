@@ -11,7 +11,9 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "codeigniter4/framework": "^4.0"
+        "codeigniter4/framework": "^4.0",
+        "robinncode/db_craft": "^1.2",
+        "seunmatt/codeigniter-log-viewer": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",

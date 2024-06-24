@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d648ee3b65e8d352e12e15817702e7cd",
+    "content-hash": "f3b30e57a1f1a422e4158092ed2bddf1",
     "packages": [
         {
             "name": "codeigniter4/framework",
@@ -192,6 +192,108 @@
                 "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
             "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "robinncode/db_craft",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robinNcode/db_craft.git",
+                "reference": "01d8132ce157fcb01d1ab7e355411ae283639eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robinNcode/db_craft/zipball/01d8132ce157fcb01d1ab7e355411ae283639eba",
+                "reference": "01d8132ce157fcb01d1ab7e355411ae283639eba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Robinncode\\DbCraft\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammad Shahin Mia Robin",
+                    "email": "msmrobin518@gmail.com"
+                }
+            ],
+            "description": "DB Craft is a CodeIgniter4 Seeder, Migration Generator.     Automatic Migration Generation: DB-Craft provides a simple command-line interface to generate migration files automatically based on the connected database. This feature allows developers to keep track of database schema changes and easily apply them to different environments.    Table-Specific Migrations: Developers can also generate migration files for specific tables, providing granular control over database changes. This flexibility allows for efficient database management and versioning.    Seeding Support: DB-Craft includes functionality to generate seeders, enabling developers to populate their database with initial data. This feature is especially useful for setting up sample data or populating reference tables.",
+            "homepage": "https://github.com/robinNcode/db_craft",
+            "keywords": [
+                "CLI Tool",
+                "Connected Database",
+                "codeigniter4",
+                "migration",
+                "php",
+                "seeder"
+            ],
+            "support": {
+                "documentation": "https://github.com/robinNcode/db_craft/blob/master/README.md",
+                "email": "msmrobin518@gmail.com",
+                "issues": "https://github.com/robinNcode/db_craft/issues",
+                "source": "https://github.com/robinNcode/db_craft/tree/v1.2"
+            },
+            "time": "2024-06-09T23:48:08+00:00"
+        },
+        {
+            "name": "seunmatt/codeigniter-log-viewer",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SeunMatt/codeigniter-log-viewer.git",
+                "reference": "043b5c58bac65eeb9c536216c8d8d97b82abf08c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SeunMatt/codeigniter-log-viewer/zipball/043b5c58bac65eeb9c536216c8d8d97b82abf08c",
+                "reference": "043b5c58bac65eeb9c536216c8d8d97b82abf08c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CILogViewer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miguel Martinez",
+                    "email": "rodilla@gmail.com"
+                },
+                {
+                    "name": "Seun Matt",
+                    "email": "smatt382@gmail.com"
+                }
+            ],
+            "description": "This is a simple Log Viewer for viewing CodeIgniter log files on the browser",
+            "keywords": [
+                "CI4",
+                "Code Igniter",
+                "Code Igniter 4",
+                "log viewer",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/SeunMatt/codeigniter-log-viewer/issues",
+                "source": "https://github.com/SeunMatt/codeigniter-log-viewer/tree/2.0.1"
+            },
+            "time": "2022-10-09T06:17:17+00:00"
         }
     ],
     "packages-dev": [

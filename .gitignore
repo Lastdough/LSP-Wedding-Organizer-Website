@@ -129,3 +129,12 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+
+# JavaScript Library
+node_modules
+
+# Template
+app/Models/TempModel.php
+app/Controllers/TempController.php
+trial.php
+app/Views/temp
