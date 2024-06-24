@@ -37,7 +37,7 @@
                     <td class="text-left py-3 px-4"><?= htmlspecialchars($order['status']) ?></td>
                     <td class="flex items-center py-3 px-4">
                         <!-- Update Status Form -->
-                        <form action="<?= site_url('admin/order-update-status') ?>" method="post" class="mr-2">
+                        <form action="<?= site_url('admin/order/update-status') ?>" method="post" class="mr-2">
                             <?= csrf_field() ?>
                             <input type="hidden" name="id" value="<?= $order['id'] ?>">
                             <select name="status" class="bg-white border border-gray-300 text-gray-700 py-1 px-3 rounded focus:outline-none focus:border-gray-500">
@@ -48,7 +48,7 @@
                             <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-700 transition-colors">Update</button>
                         </form>
                         <!-- Delete Button -->
-                        <form action="<?= site_url('admin/order-delete') ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this order?');">
+                        <form action="<?= site_url('admin/order/delete') ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this order?');">
                             <?= csrf_field() ?>
                             <input type="hidden" name="id" value="<?= $order['id'] ?>">
                             <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors">Delete</button>

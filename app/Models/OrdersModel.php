@@ -13,8 +13,7 @@ class OrdersModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields = [
-        'package_id', 'name', 'email', 'phone_number', 'number_of_guests', 'wedding_date',
-        'status', 'user_id', 'created_at', 'updated_at'
+        'package_id', 'name', 'email', 'phone_number', 'address', 'number_of_guests', 'wedding_date', 'notes', 'status', 'user_id', 'created_at', 'updated_at'
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -28,12 +27,13 @@ class OrdersModel extends Model
 
     // Validation
     protected $validationRules = [
-        'package_id' => 'required|alpha_numeric',
-        'name' => 'required|alpha_space|max_length[80]',
-        'email' => 'required|valid_email|max_length[80]',
-        'phone_number' => 'required|max_length[30]',
+        'name' => 'required',
+        'email' => 'required|valid_email',
+        'phone_number' => 'required|numeric',
+        'address' => 'required',
         'number_of_guests' => 'required|integer',
         'wedding_date' => 'required|valid_date',
+        'notes' => 'permit_empty|string',
         'status' => 'required|in_list[requested,approved,rejected]',
         'user_id' => 'required|integer'
     ];
@@ -64,10 +64,6 @@ class OrdersModel extends Model
         'wedding_date' => [
             'required' => 'Wedding date is required',
             'valid_date' => 'Wedding date must be a valid date'
-        ],
-        'status' => [
-            'required' => 'Status is required',
-            'in_list' => 'Status must be one of: requested, approved, rejected'
         ],
         'user_id' => [
             'required' => 'User ID is required',

@@ -5,8 +5,14 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'HomeController::index');
+$routes->get('/about', 'HomeController::about');
+$routes->get('/packages', 'HomeController::packages');
+$routes->get('/package/view', 'HomeController::viewPackage');
 
+$routes->get('/orders', 'OrderController::viewOrders');
+$routes->get('/order/form', 'OrderController::orderForm');
+$routes->post('/order/submit', 'OrderController::submit');
 
 // Auth 
 $routes->get('/login', 'AuthController::loginView');
@@ -25,6 +31,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
 
     $routes->get('orders', 'AdminController::orders');
     $routes->post('order/update-status', 'AdminController::updateOrderStatus');
+    $routes->post('order/delete', 'AdminController::deleteOrder');
 
     $routes->get('package/create', 'AdminController::createPackage');
     $routes->post('package/store', 'AdminController::storePackage');
