@@ -57,13 +57,14 @@
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 flex flex-col min-h-screen">
 
     <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center p-4">
             <a href="<?= site_url('/') ?>" class="text-2xl font-bold text-gray-800">Wedding Organizer</a>
             <nav class="space-x-4">
+                <a href="<?= site_url('/') ?>" class="text-gray-700 hover:text-gray-900">Home</a>
                 <a href="<?= site_url('/about') ?>" class="text-gray-700 hover:text-gray-900">About</a>
                 <a href="<?= site_url('/packages') ?>" class="text-gray-700 hover:text-gray-900">Packages</a>
                 <?php if (!session('isLoggedIn')) : ?>
@@ -78,19 +79,19 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto my-8">
+    <main class="container mx-auto my-8 flex-grow">
         <?= $this->renderSection('content') ?>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
         <div class="container mx-auto text-center">
             <p class="text-gray-400">&copy; <?= date('Y') ?> Wedding Organizer. All rights reserved.</p>
             <div class="mt-4">
                 <a href="<?= site_url('/') ?>" class="text-gray-400 hover:text-white mx-2">Home</a>
                 <a href="<?= site_url('/about') ?>" class="text-gray-400 hover:text-white mx-2">About</a>
                 <a href="<?= site_url('/packages') ?>" class="text-gray-400 hover:text-white mx-2">Packages</a>
-                <a href="<?= site_url('/contact') ?>" class="text-gray-400 hover:text-white mx-2">Contact</a>
+                <a href="<?= site_url('/about#contact') ?>" class="text-gray-400 hover:text-white mx-2">Contact</a>
             </div>
         </div>
     </footer>

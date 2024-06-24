@@ -1,7 +1,7 @@
 <?= $this->extend('home/template/layout') ?>
 <?= $this->section('content') ?>
 
-<div class="container mx-auto py-16">
+<div class="container mx-auto py-4">
     <h2 class="text-3xl font-bold mb-8">Wedding Packages</h2>
     <div class="flex flex-col gap-8">
         <?php foreach ($packages as $package) : ?>

@@ -5,7 +5,7 @@
     <h2 class="text-2xl font-bold">Wedding Packages</h2>
     <div class="flex space-x-4">
         <!-- Search Form -->
-        <form action="<?= site_url('admin/dashboard') ?>" method="get" class="flex items-center">
+        <form action="<?= site_url('admin/') ?>" method="get" class="flex items-center">
             <input type="text" id="searchInput" name="search" placeholder="Search wedding packages..." class="text-black py-2 px-4 rounded-l-lg focus:outline-none border" />
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-r-lg hover:bg-blue-600">Search</button>
         </form>
@@ -39,7 +39,7 @@
                     <td class="flex items-center py-3 px-4">
                         <!-- Edit Button -->
                         <a href="<?= site_url('admin/package/edit?id=' . $package['id']) ?>" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-700 transition-colors mr-2">Edit</a>
-                        <a href="<?= site_url('package/view/' . $package['id']) ?>" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors mr-2">View</a>
+                        <a href="<?= site_url('package/view/?id=' . $package['id']) ?>" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors mr-2">View</a>
                         <!-- Delete Button -->
                         <form action="<?= site_url('admin/package/delete') ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this package?');">
                             <?= csrf_field() ?>
